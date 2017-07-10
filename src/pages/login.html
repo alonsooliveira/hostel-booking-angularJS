@@ -1,0 +1,26 @@
+<div class="container has-text-centered">
+    <h1 class="title pacifico larger-text">
+        hostel booking
+    </h1>
+    <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+            <form>
+                <p class="control" id="usernameControl">
+                    <input class="input is-large" type="username" ng-model="ctrl.model.email" placeholder="Email">
+                    <span class="tag is-danger">Email invalid</span>
+                </p>
+
+                <p class="control">
+                    <input class="input is-large" type="password" ng-model="ctrl.model.password" placeholder="Password">
+                    <span class="tag is-danger">Password invalid</span>
+                </p>
+
+                <p>
+                    <button ng-click="ctrl.login()" class="button is-primary is-inverted is-outlined is-large is-fullwidth">Login</button>
+                    <br>
+                    <a href="/#!/register" class="button is-link is-fullwidth">Register</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

@@ -21,9 +21,15 @@
                 authorize: false
             })
             .when('/home', {
-                controller: 'roomController',
+                controller: 'homeController',
                 controllerAs: 'ctrl',
                 templateUrl: 'pages/home.html',
+                authorize: false
+            })
+            .when('/book', {
+                controller: 'bookController',
+                controllerAs: 'ctrl',
+                templateUrl: 'pages/book.html',
                 authorize: false
             });
     });

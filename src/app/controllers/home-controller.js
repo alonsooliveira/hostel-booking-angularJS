@@ -1,8 +1,8 @@
 (function () {
     angular.module('app')
-        .controller('roomController', roomController);
+        .controller('homeController', homeController);
 
-    function roomController(roomService) {
+    function homeController(roomService) {
         var self = this;
         /* methods */
         self.getAll = getAll;

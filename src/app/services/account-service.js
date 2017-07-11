@@ -2,7 +2,7 @@
     'use strict'
     angular.module('app').factory('accountService', accountService);
 
-    function accountService($http, appSettings,) {
+    function accountService($http, appSettings) {
         var service = {
             login: login,
             register: register

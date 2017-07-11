@@ -1,0 +1,65 @@
+<div class="columns is-multiline">
+    <div class="column is-3 animated slideInUp" ng-repeat="room in ctrl.getAll()">
+
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="content">
+                    {{room.description}}
+                    <br>
+                    <small>11:09 PM - 1 Jan 2016</small>
+                </div>
+            </div>
+            <footer class="card-footer">
+                <a class="card-footer-item" onclick="document.getElementById('modal').classList.add('is-active');" data-taget="modal">Save</a>
+                <a class="card-footer-item">Delete</a>
+            </footer>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <article class="media">
+                        <div class="media-content">
+                            <div class="content">
+                                <strong>Room 1</strong> <small>Curitiba</small>
+                                    <br>
+                                    <div class="field">
+                                        <p class="control has-icons-left has-icons-right">
+                                            <input class="input is-success" type="text" placeholder="Date">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                            <span class="icon is-small is-right">
+                                                <i class="fa fa-check"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="control has-icons-left has-icons-right">
+                                            <input class="input is-success" type="text" placeholder="Date">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                            <span class="icon is-small is-right">
+                                                <i class="fa fa-check"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <a class="button is-primary is-outlined">Check-in</a>
+                                    <a class="button is-primary is-outlined" onclick="document.getElementById('modal').classList.remove('is-active');">Cancel</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="modal-close is-large" onclick="document.getElementById('modal').classList.remove('is-active');"></button>
+        </div>
+
+    </div>
+
+</div>

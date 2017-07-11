@@ -19,6 +19,12 @@
                 controllerAs: 'ctrl',
                 templateUrl: 'pages/register.html',
                 authorize: false
+            })
+            .when('/home', {
+                controller: 'roomController',
+                controllerAs: 'ctrl',
+                templateUrl: 'pages/home.html',
+                authorize: false
             });
     });
 })();

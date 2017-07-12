@@ -4,21 +4,34 @@
 <div class="columns">
     <div class="column is-half is-offset-one-quarter">
         <form>
-            <p class="control" id="usernameControl">
-                <input class="input is-large" type="username" ng-model="ctrl.model.email" placeholder="Email">
-                <span class="tag is-danger">Email invalid</span>
-            </p>
-
-            <p class="control">
-                <input class="input is-large" type="password" ng-model="ctrl.model.password" placeholder="Password">
-                <span class="tag is-danger">Password invalid</span>
-            </p>
-
-            <p>
-                <button ng-click="ctrl.login()" class="button is-primary is-inverted is-outlined is-large is-fullwidth">Login</button>
-                <br>
-                <a href="/#!/register" class="button is-link is-fullwidth">Register</a>
-            </p>
+            <div class="card">
+                <div class="card-content">
+                    <div class="content">
+                        <br>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-success is-large" ng-model="ctrl.model.email" type="email" placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input is-success is-large" type="password" ng-model="ctrl.model.password" 
+                                    placeholder="Password">
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a class="card-footer-item" ng-click="ctrl.login()">Login</a>
+                    <a class="card-footer-item" href="/#!/register">Register </a>
+                </footer>
+            </div>
         </form>
     </div>
 </div>

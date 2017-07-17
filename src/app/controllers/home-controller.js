@@ -6,9 +6,16 @@
         var self = this;
         /* methods */
         self.getAll = getAll;
+        self.rooms = [];
+
+        getAll();
         
         function getAll() {
-            return roomService.getAll();
+            roomService.getAll().then(function (result) {
+                console.log(self.rooms);
+                self.rooms = result;
+                return self.rooms;
+            });
         }
     }
 })();

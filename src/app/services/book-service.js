@@ -11,7 +11,6 @@
         return service;
 
         function book(book) {
-            console.log(book);
             return $http.post(appSettings + 'v1/book', book)
                 .then((result) => {
 
